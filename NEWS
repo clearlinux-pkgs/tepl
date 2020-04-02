@@ -1,0 +1,286 @@
+News in 4.4.0, 2020-03-05
+-------------------------
+* Translation updates.
+
+News in 4.3.1, 2019-11-22
+-------------------------
+* Utils functions: make some functions public, add more public functions, and
+  write more unit tests.
+* Documentation: introduction: more information about the chosen development
+  model.
+* Translation updates.
+
+News in 4.2.1, 2019-11-21
+-------------------------
+
+Changes for packagers:
+* Documentation: GTK+ -> GTK. Please update the description of the package.
+
+Other changes:
+* Fix a few compilation warnings.
+* Better use of errno (save its value ASAP, then reset it to 0).
+* Build from Git:
+ - Allow building with gettext ≥ 0.20.
+ - Adapt for AX_CODE_COVERAGE API break in autoconf-archive version 2019.01.06.
+ (this didn't affect the build from the previous tarball, since the Autotools
+ are "bundled" with the tarball).
+* Translation updates.
+
+News in 4.2.0, 2018-07-16
+-------------------------
+* Nothing new.
+
+News in 4.1.1, 2018-04-15
+-------------------------
+* Remove the Amtk library, it has been moved to its own git repository, see:
+  https://wiki.gnome.org/Projects/Amtk
+
+News in 4.0.0, 2018-04-08
+-------------------------
+- Project moved to GNOME GitLab.
+- Various small improvements.
+- Translation updates.
+
+News in 3.99.1, 2017-12-09
+--------------------------
+
+* General:
+ - Use GtkSourceView 4.
+
+* Amtk:
+ - Improve amtk_utils_bind_g_action_to_gtk_action() to support _detailed_
+   GAction names.
+ - Add amtk_utils_create_gtk_action().
+
+* Framework:
+ - Add more GAction's and corresponding AmtkActionInfo's:
+	- win.tepl-undo
+	- win.tepl-redo
+	- win.tepl-indent
+	- win.tepl-unindent
+	- win.tepl-open
+	- win.tepl-save
+	- win.tepl-save-as
+	- app.tepl-new-window
+ - Add TeplApplicationWindow:handle-title boolean property to handle the window
+   title.
+ - Add more vfuncs to TeplAbstractFactory: create_file and create_main_window.
+ - Add TeplAbstractFactoryVala class to work-around Vala bugs.
+ - Add functions related to main windows:
+	- tepl_application_get_active_main_window()
+	- tepl_application_window_is_main_window()
+	- tepl_application_window_get_window_group()
+ - TeplApplication: add options to handle the GApplication::activate and
+   GApplication::open signals.
+ - Start to write high-level functions for loading and saving files.
+ - On Tab::close-request, show close confirmation dialog.
+
+* File loading and saving toolkit:
+ - TeplFileLoader:
+	- Internal code refactorings to have more re-usable code independent of
+	  GtkTextView.
+	- Add fallback mode to determine encoding if uchardet fails.
+	- Write more unit tests.
+ - TeplEncoding:
+	- Make tepl_encoding_get_default_candidates() more robust in case of
+	  mis-translation.
+	- Improve API documentation.
+ - Write GtkSourceView to Tepl file loading and saving porting guide.
+
+* Misc:
+ - Translation updates.
+
+News in 3.0.0, 2017-09-09
+-------------------------
+
+* Translation updates.
+
+News in 2.99.4, 2017-08-20
+--------------------------
+
+Amtk:
+* Add factory functions to create GtkMenuToolButton's and GtkCheckMenuItem's.
+* Improve API of amtk_application_window_connect_menu_to_statusbar().
+* Add amtk_utils_bind_g_action_to_gtk_action(), to be able to port an
+  application gradually to GAction while still using GtkUIManager.
+
+Framework:
+* TeplTabLabel: add an overridable tooltip API, by default the tooltip shows
+  the file location.
+
+News in 2.99.3, 2017-08-09
+--------------------------
+
+Amtk:
+* Add amtk_init() and amtk_finalize().
+* Remove AmtkFactoryMenu class, move its functions to its parent class
+  AmtkFactory.
+* AmtkFactory: add functions to create GtkToolItem's.
+* Add amtk_application_window_create_open_recent_menu().
+* Improvements to the documentation.
+* Other small code improvements.
+
+Framework:
+* TeplTabGroup interface:
+	* Add :active-tab, :active-view and :active-buffer properties.
+	* Add tepl_tab_group_set_active_tab().
+	* Add tepl_tab_group_append_tab().
+* Finish to implement the GActions for the Edit menu: cut, copy, paste, delete
+  and select all. (Update the GAction:enabled properties).
+* Add "win.tepl-new-file" GAction.
+* Add the TeplAbstractFactory class to create TeplTab's and tab labels.
+* TeplBuffer: rename title -> full-title and add short-title.
+* Add the TeplTab::close-request signal.
+* Add the TeplTabLabel class (which shows the buffer short-title, plus a close
+  button; the tooltip is not yet handled).
+
+Misc:
+* Add tepl_init() and tepl_finalize(), do not use DSO constructors/destructors.
+* Implement small internal utility: TeplSignalGroup, inspired by DzlSignalGroup
+  from libdazzle, but with a much simpler implementation.
+* Improvements to the documentation.
+* Translation updates.
+
+News in 2.99.2, 2017-07-18
+--------------------------
+
+Amtk:
+* The biggest change in this release is that the classes and functions related
+  to actions and menus have been moved to a new shared library called Amtk
+  (Actions, Menus and Toolbars Kit), since it was not really related to text
+  editors, it is more general. But Amtk is still developed inside the Tepl
+  repository. Amtk is a basic GtkUIManager replacement based on GAction (still
+  under development, it is not yet finished, for example it doesn't handle
+  toolbars).
+* Add AmtkFactory and AmtkFactoryMenu, which replace
+  amtk_action_info_store_create_menu_item().
+
+Framework:
+* Revamp TeplTab.
+* Add TeplTabGroup interface.
+* Add TeplNotebook that implements TeplTabGroup.
+* Implement TeplTabGroup in TeplTab and TeplApplicationWindow.
+* Start to implement the Edit menu: provide GActions and AmtkActionInfos for
+  the cut, copy, paste, delete and select all actions.
+
+Misc:
+* Improve TeplInfoBar.
+
+News in 2.99.1, 2017-06-15
+--------------------------
+* The library has been renamed from Gtef (GTK+ text editor framework) to Tepl
+  (Text editor product line), to have a more beautiful name. The end of Tepl is
+  pronounced like “apple”.
+* Write a more complete introduction in the reference manual.
+* Add Slovenian translation.
+
+News in 2.0.1, 2017-04-21
+-------------------------
+* The bugzilla product has been created.
+* Fix bug in gtef_iter_get_line_indentation().
+* Add Hungarian, Russian and Friulian translations.
+* Other small improvements.
+
+News in 2.0.0, 2017-03-18
+-------------------------
+* Add Ukrainian and Serbian translations.
+
+News in 1.99.2, 2017-03-12
+--------------------------
+This is an unstable release leading towards 2.0. The 2.0 stable version will be
+released at the same time as GNOME 3.24.
+
+Basic GtkUIManager replacement based on GAction:
+* Add an easy way to create a GtkMenuItem from a GtefActionInfo.
+* Add a function to check that every GtefActionInfo in a GtefActionInfoStore
+  has been used.
+* Add reference counting to GtefActionInfo.
+* Add GtefActionInfoCentralStore singleton class.
+* Add gtef_action_map_add_action_entries_check_dups(), to check if there are
+  duplicates when adding GActions to a GActionMap.
+* Rename gtef_application_get_action_info_store() to
+  gtef_application_get_app_action_info_store().
+* Add GtefMenuShell, an extension of GtkMenuShell with the ::menu-item-selected
+  and ::menu-item-deselected signals.
+* Add gtef_menu_item_get/set_long_description().
+* Add GtefApplicationWindow, an extension of GtkApplicationWindow with:
+	* A statusbar property.
+	* A function to connect a GtefMenuShell to the statusbar,
+	  pushing/popping the long descriptions of GtkMenuItems when they are
+	  selected/deselected.
+	* A function to connect a GtkRecentChooserMenu to the statusbar,
+	  pushing/popping the full paths.
+	* A function to create a GtkMenuItem with a simple and generic
+	  GtkRecentChooserMenu as submenu.
+
+Misc:
+* Add gtef_application_open_simple().
+* Replace GNOME by GTK+ in the Gtef acronym. Gtef now stands for “GTK+ Text
+  Editor Framework”.
+* The project is now hosted on gnome.org!
+  https://wiki.gnome.org/Projects/Gtef
+  The bugzilla product is not yet created.
+* Add Polish, Brazilian Portuguese, Swedish, Indonesian and German
+  translations.
+
+News in 1.99.1, 2017-01-26
+--------------------------
+This is an unstable release leading towards 2.0. The 2.0 stable version will be
+released at the same time as GNOME 3.24.
+
+File loading and saving:
+* Finish the first usable version of the new GtefFileLoader.
+* Use etags instead of mtime.
+* GtefFileSaver: do not use an heuristic to know if it's a "save as" operation.
+* Add GtefEncoding, a fork of GtkSourceEncoding to suit the needs of the new
+  file loader.
+* Re-usable code outside of GtkTextView: GtefFileContentLoader and
+  GtefEncodingConverter (private classes).
+* Various other small improvements.
+
+Various features for text editors:
+* Add GtefBuffer:gtef-style-scheme-id property.
+* Add gtef_view_select_lines().
+* Add gtef_view_goto_line() and gtef_view_goto_line_offset().
+* Add gtef_iter_get_line_indentation().
+* The GtefInfoBar class has been revamped.
+
+Starting a basic GtkUIManager replacement based on GAction:
+* Add gtef_utils_menu_item_set_icon_name()
+* Add GtefActionInfo
+* Add GtefActionInfoStore
+* Note that those classes are a little out of scope for a text editor library.
+  I would be happy to move those classes to a better library once the feature
+  is finished and well-tested. The classes were added to Gtef for convenience.
+
+Framework:
+* Add gtef namespace to GtefBuffer signals and properties to avoid potential
+  conflicts with future GtkSourceView versions.
+* Add GtefApplication with gtef_application_get_action_info_store().
+
+Documentation:
+* Add an intro with the pkg-config name.
+* List API breaks.
+
+Misc:
+* Improvements to the build system.
+
+News in 1.0.0, 2016-10-26
+-------------------------
+
+This is the first version of Gtef.
+
+File loading and saving:
+* Save and load file metadata. If GVfs is not available, there is a fallback
+  implementation with an XML file (used e.g. on Windows).
+* A new file loader based on uchardet (implementation not completely finished).
+
+Starting the framework:
+* GtefBuffer, a subclass of GtkSourceBuffer with additional features.
+* GtefView, a subclass of GtkSourceView with additional features.
+* GtefTab, contains a GtefView with GtkInfoBars on top.
+* GtefInfoBar, a subclass of GtkInfoBar.
+
+Starting code folding:
+* GtefGutterRendererFolds, a basic gutter renderer for code folding.
+* GtefFoldRegion, a foldable region in a GtkTextBuffer.
