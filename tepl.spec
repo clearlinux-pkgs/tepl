@@ -4,7 +4,7 @@
 #
 Name     : tepl
 Version  : 5.0.0
-Release  : 2
+Release  : 3
 URL      : https://download.gnome.org/sources/tepl/5.0/tepl-5.0.0.tar.xz
 Source0  : https://download.gnome.org/sources/tepl/5.0/tepl-5.0.0.tar.xz
 Summary  : No detailed summary available
