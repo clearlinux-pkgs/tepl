@@ -125,6 +125,9 @@ libtepl-5.so.0:tepl_panel_provide_active_component_gsetting
 libtepl-5.so.0:tepl_panel_restore_state_from_gsettings
 libtepl-5.so.0:tepl_panel_save_state_to_gsettings
 libtepl-5.so.0:tepl_selection_type_get_type
+libtepl-5.so.0:tepl_space_drawer_prefs_get_space_drawer
+libtepl-5.so.0:tepl_space_drawer_prefs_get_type
+libtepl-5.so.0:tepl_space_drawer_prefs_new
 libtepl-5.so.0:tepl_statusbar_get_type
 libtepl-5.so.0:tepl_statusbar_hide_cursor_position
 libtepl-5.so.0:tepl_statusbar_new
