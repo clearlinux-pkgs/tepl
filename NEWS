@@ -1,5 +1,31 @@
-News in 6.00.0, 2021-03-24 (not yet released)
+News in 6.1.1, 2022-06-10
+-------------------------
+* New features / API: see the index of new symbols in the reference
+  documentation (generated with gtk-doc).
+* Tests: files reorganization within the repository, have the following
+  directories:
+    - tests/interactive-tests/
+    - tests/unit-tests/
+* Documentation: split the API Reference into two parts:
+    - Text Editor Support
+    - General Utilities (more broadly applicable)
+* Documentation: various other small improvements.
+
+News in 6.0.2, 2022-05-27
+-------------------------
+* Build system: check if compiler supports --version-script linker option.
+
+News in 6.0.1, 2022-05-02
+-------------------------
+* No changes.
+* Note that a 6.00.0 version was released in 2021. The double 00 was a mistake.
+  See https://download.gnome.org/sources/tepl/6.00/
+  Hence the .1 micro version number in this release.
+
+News in 5.99.1, 2022-04-21
 --------------------------
+* The project is now located at: https://gitlab.gnome.org/swilmet/tepl
+
 * API changes:
  - The TeplInfoBar class has been reworked.
 
@@ -9,9 +35,14 @@ News in 6.00.0, 2021-03-24 (not yet released)
  - TeplLanguageChooserWidget
  - TeplLanguageChooserDialog
  - TeplProgressInfoBar
+ - TeplSignalGroup (make the class public).
  - Utility functions: add a few functions.
 
 * Misc:
+ - Build: add a gobject_introspection option.
+ - tepl_utils_replace_home_dir_with_tilde(): support $HOME that ends with a
+   slash.
+ - Documentation improvements.
  - Translation updates.
 
 News in 5.1.1, 2020-10-11

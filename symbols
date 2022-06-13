@@ -69,6 +69,7 @@ libtepl-6.so.0:tepl_file_saver_set_flags
 libtepl-6.so.0:tepl_file_saver_set_newline_type
 libtepl-6.so.0:tepl_file_set_location
 libtepl-6.so.0:tepl_file_set_mount_operation_factory
+libtepl-6.so.0:tepl_file_set_untitled_file_callback
 libtepl-6.so.0:tepl_finalize
 libtepl-6.so.0:tepl_fold_region_get_bounds
 libtepl-6.so.0:tepl_fold_region_get_buffer
@@ -137,6 +138,7 @@ libtepl-6.so.0:tepl_panel_provide_active_component_gsetting
 libtepl-6.so.0:tepl_panel_restore_state_from_gsettings
 libtepl-6.so.0:tepl_panel_save_state_to_gsettings
 libtepl-6.so.0:tepl_pango_font_description_to_css
+libtepl-6.so.0:tepl_prefs_create_font_component
 libtepl-6.so.0:tepl_progress_info_bar_get_type
 libtepl-6.so.0:tepl_progress_info_bar_new
 libtepl-6.so.0:tepl_progress_info_bar_pulse
@@ -144,6 +146,11 @@ libtepl-6.so.0:tepl_progress_info_bar_set_fraction
 libtepl-6.so.0:tepl_progress_info_bar_set_markup
 libtepl-6.so.0:tepl_progress_info_bar_set_text
 libtepl-6.so.0:tepl_selection_type_get_type
+libtepl-6.so.0:tepl_settings_get_selected_font
+libtepl-6.so.0:tepl_settings_get_singleton
+libtepl-6.so.0:tepl_settings_get_type
+libtepl-6.so.0:tepl_settings_peek_desktop_interface_settings
+libtepl-6.so.0:tepl_settings_provide_font_settings
 libtepl-6.so.0:tepl_signal_group_add
 libtepl-6.so.0:tepl_signal_group_clear
 libtepl-6.so.0:tepl_signal_group_new
@@ -194,6 +201,7 @@ libtepl-6.so.0:tepl_utils_file_query_exists_async
 libtepl-6.so.0:tepl_utils_file_query_exists_finish
 libtepl-6.so.0:tepl_utils_get_file_extension
 libtepl-6.so.0:tepl_utils_get_file_shortname
+libtepl-6.so.0:tepl_utils_get_titled_component
 libtepl-6.so.0:tepl_utils_list_box_clear
 libtepl-6.so.0:tepl_utils_list_box_get_filtered_children
 libtepl-6.so.0:tepl_utils_list_box_get_row_at_index_with_filter
@@ -202,6 +210,8 @@ libtepl-6.so.0:tepl_utils_list_box_scroll_to_selected_row
 libtepl-6.so.0:tepl_utils_list_box_setup_scrolling
 libtepl-6.so.0:tepl_utils_markup_escape_text
 libtepl-6.so.0:tepl_utils_override_font
+libtepl-6.so.0:tepl_utils_override_font_description
+libtepl-6.so.0:tepl_utils_override_font_string
 libtepl-6.so.0:tepl_utils_replace_home_dir_with_tilde
 libtepl-6.so.0:tepl_utils_show_warning_dialog
 libtepl-6.so.0:tepl_utils_str_end_truncate
