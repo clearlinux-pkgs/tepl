@@ -3,6 +3,7 @@ libtepl-6.so.0:tepl_abstract_factory_create_main_window
 libtepl-6.so.0:tepl_abstract_factory_create_metadata_manager_file
 libtepl-6.so.0:tepl_abstract_factory_create_tab
 libtepl-6.so.0:tepl_abstract_factory_create_tab_label
+libtepl-6.so.0:tepl_abstract_factory_fill_prefs_dialog
 libtepl-6.so.0:tepl_abstract_factory_get_singleton
 libtepl-6.so.0:tepl_abstract_factory_get_type
 libtepl-6.so.0:tepl_abstract_factory_set_singleton
@@ -138,7 +139,16 @@ libtepl-6.so.0:tepl_panel_provide_active_component_gsetting
 libtepl-6.so.0:tepl_panel_restore_state_from_gsettings
 libtepl-6.so.0:tepl_panel_save_state_to_gsettings
 libtepl-6.so.0:tepl_pango_font_description_to_css
+libtepl-6.so.0:tepl_prefs_create_color_scheme_component
+libtepl-6.so.0:tepl_prefs_create_display_line_numbers_checkbutton
+libtepl-6.so.0:tepl_prefs_create_files_component
 libtepl-6.so.0:tepl_prefs_create_font_component
+libtepl-6.so.0:tepl_prefs_create_highlighting_component
+libtepl-6.so.0:tepl_prefs_create_insert_spaces_component
+libtepl-6.so.0:tepl_prefs_create_tab_width_spinbutton
+libtepl-6.so.0:tepl_prefs_dialog_get_singleton
+libtepl-6.so.0:tepl_prefs_dialog_get_type
+libtepl-6.so.0:tepl_prefs_dialog_show_for_parent
 libtepl-6.so.0:tepl_progress_info_bar_get_type
 libtepl-6.so.0:tepl_progress_info_bar_new
 libtepl-6.so.0:tepl_progress_info_bar_pulse
@@ -146,6 +156,7 @@ libtepl-6.so.0:tepl_progress_info_bar_set_fraction
 libtepl-6.so.0:tepl_progress_info_bar_set_markup
 libtepl-6.so.0:tepl_progress_info_bar_set_text
 libtepl-6.so.0:tepl_selection_type_get_type
+libtepl-6.so.0:tepl_settings_get_range_uint
 libtepl-6.so.0:tepl_settings_get_selected_font
 libtepl-6.so.0:tepl_settings_get_singleton
 libtepl-6.so.0:tepl_settings_get_type
