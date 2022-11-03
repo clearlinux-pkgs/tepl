@@ -4,7 +4,7 @@
 #
 Name     : tepl
 Version  : 6.2.0
-Release  : 11
+Release  : 12
 URL      : https://download.gnome.org/sources/tepl/6.2/tepl-6.2.0.tar.xz
 Source0  : https://download.gnome.org/sources/tepl/6.2/tepl-6.2.0.tar.xz
 Summary  : No detailed summary available
