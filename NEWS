@@ -1,12 +1,3 @@
-News in 6.5.1, 2023-04-26
--------------------------
-* Tepl now depends on libgedit-gtksourceview instead of GtkSourceView:
-    https://github.com/gedit-technology/libgedit-gtksourceview
-    https://gedit-technology.net/
-* New classes: TeplStack, TeplStackItem and TeplStackSwitcherMenu.
-* Remove the attic/ (no longer necessary with the TeplStack* classes).
-* Build: adapt to the latest Meson version.
-
 News in 6.4.0, 2023-01-01
 -------------------------
 * Build: simplify handling of library soversion.
